@@ -1,0 +1,1 @@
+import type {MetadataRoute} from 'next';import {products} from '@/lib/catalog';export default function sitemap():MetadataRoute.Sitemap{return[{url:'https://meadowandstem.com',lastModified:new Date()},{url:'https://meadowandstem.com/shop',lastModified:new Date()},...products.map(p=>({url:`https://meadowandstem.com/products/${p.slug}`,lastModified:new Date()}))]}
